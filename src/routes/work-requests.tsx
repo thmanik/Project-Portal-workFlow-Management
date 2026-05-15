@@ -2071,7 +2071,7 @@ function WorkRequestsPage() {
               {renderNote("CHECKING_APPROVE_REJECT", "Checking note")}
               <div className="flex gap-2">
                 <Button className="flex-1" onClick={() => runWorkflowAction(request, "Checking approved", "TMS Checking - M2", () => reviewChecking(request.id, true, getActionNote("CHECKING_APPROVE_REJECT")))}><CheckCircle2 className="h-4 w-4" /> Approve</Button>
-                <Button variant="destructive" className="flex-1" onClick={() => runWorkflowAction(request, "Checking returned to drawing", "TMS Checking - M2", () => reviewChecking(request.id, false, getActionNote("CHECKING_APPROVE_REJECT")))}><XCircle className="h-4 w-4" /> Backward</Button>
+                <Button variant="destructive" className="flex-1" onClick={() => runWorkflowAction(request, "Checking returned to drawing", "TMS Checking - M2", () => reviewChecking(request.id, false, getActionNote("CHECKING_APPROVE_REJECT")))}><XCircle className="h-4 w-4" />Reject</Button>
               </div>
             </>)}
 
@@ -2080,7 +2080,7 @@ function WorkRequestsPage() {
               {renderNote("APPROVAL_APPROVE_REJECT", "Approval note")}
               <div className="flex gap-2">
                 <Button className="flex-1" onClick={() => runWorkflowAction(request, "TMS-M3 approved and sent to Engineering Lead", "TMS Approval - M3", () => reviewApproval(request.id, true, getActionNote("APPROVAL_APPROVE_REJECT")))}><CheckCircle2 className="h-4 w-4" /> Approve</Button>
-                <Button variant="destructive" className="flex-1" onClick={() => runWorkflowAction(request, "TMS-M3 returned to drawing", "TMS Approval - M3", () => reviewApproval(request.id, false, getActionNote("APPROVAL_APPROVE_REJECT")))}><XCircle className="h-4 w-4" /> Backward</Button>
+                <Button variant="destructive" className="flex-1" onClick={() => runWorkflowAction(request, "TMS-M3 returned to drawing", "TMS Approval - M3", () => reviewApproval(request.id, false, getActionNote("APPROVAL_APPROVE_REJECT")))}><XCircle className="h-4 w-4" />Reject</Button>
               </div>
             </>)}
 
@@ -2149,7 +2149,7 @@ function WorkRequestsPage() {
               {renderNote("DIVISION_MEMBER_REVIEW", "Review note")}
               <div className="flex gap-2">
                 <Button className="flex-1" onClick={() => runWorkflowAction(request, "Division member approved", "Division Final Review", () => originMemberDecision(request.id, true, getActionNote("DIVISION_MEMBER_REVIEW")))}><CheckCircle2 className="h-4 w-4" /> Approve</Button>
-                <Button variant="destructive" className="flex-1" onClick={() => runWorkflowAction(request, "Returned back to TMS", "Division Final Review", () => originMemberDecision(request.id, false, getActionNote("DIVISION_MEMBER_REVIEW")))}><XCircle className="h-4 w-4" /> Backward</Button>
+                <Button variant="destructive" className="flex-1" onClick={() => runWorkflowAction(request, "Returned back to TMS", "Division Final Review", () => originMemberDecision(request.id, false, getActionNote("DIVISION_MEMBER_REVIEW")))}><XCircle className="h-4 w-4" />Reject</Button>
               </div>
             </>)}
 
